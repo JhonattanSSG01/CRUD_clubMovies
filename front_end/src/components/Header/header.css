@@ -1,8 +1,19 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
 
 header > .navbar {
   background-color: #21164d;
+}
+
+.container-fluid {
+  gap: 20px 0;
+}
+
+.navbar .logo {
+  width: clamp(70px, 10vw, 140px);
+}
+
+.navbar .logoT {
+  width: clamp(120px, 10vw, 250px);
 }
 
 .container-fluid > .navbar-brand {
@@ -12,13 +23,16 @@ header > .navbar {
   align-items: center;
 }
 
-.navbar-brand > .container-line {
-  margin: 0 10px;
+.container-line > .line-side {
+  width: 30px;
+  transform: rotate(90deg);
 }
 
-.container-line > .line-side{
-  width: 50px;
-  transform: rotate(90deg);
+.navbar-toggler{
+  border: none;
+  outline: none;
+  background-color: #ab8aff;
+  opacity: .4;
 }
 
 /* From uiverse.io by @satyamchaudharydev */
@@ -38,7 +52,8 @@ header > .navbar {
   padding-inline: 0.8em;
   border-radius: 30px;
   transition: border-radius 0.5s ease;
-  background-color: rgba(0,0,0,.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  order: 3;
 }
 /* styling of Input */
 .input-control {
@@ -82,52 +97,81 @@ header > .navbar {
 }
 
 /* close button shown when typing */
-input:not(:placeholder-shown) {
+.input-control:not(:placeholder-shown) {
   opacity: 1;
   visibility: visible;
 }
-
 /*nav*/
-.collapse{
+.collapse {
   flex-grow: 0;
 }
 
-.collapse .nav-item{
+.collapse .nav-item {
   display: flex;
   align-items: center;
   margin: 0 15px;
 }
 
-.nav-item > .icon{
+.nav-item > .icon {
   margin-right: 5px;
-  color: #AB8AFF;
+  color: #ab8aff;
   font-size: 30px;
 }
 
-.nav-item > .nav-link{
+.nav-item > .nav-link {
   color: #fff;
   font-size: 20px;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
-.nav-item > .link:hover{
-  color: #AB8AFF;
+.nav-item:not(:nth-child(3)){
+  justify-content: center;
+}
+
+.nav-item > .link:hover {
+  color: #ab8aff;
   transform: scale(1.1);
 }
 
-.nav-item > .dropLink:hover{
-  color: #AB8AFF;
+.nav-item > .dropLink:hover {
+  color: #ab8aff;
 }
 
-.dropdown .porfile{
+.dropdown .porfile {
   margin: 0 18px 0 10px;
 }
 
-.arrow{
+.arrow {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -15px;
+  right: 0;
   display: grid;
   place-items: center;
 }
+
+@media only screen and (min-width: 480px) {
+  .container-fluid {
+    gap: 0;
+  }
+
+  .navbar-toggler{
+    order: 3;
+  }
+
+  .navbar-brand > .container-line {
+    margin: 0 10px;
+  }
+
+  .container-line > .line-side {
+    width: 50px;
+  }
+
+  .form{
+    order: initial;
+  }
+  .arrow {
+    right: -15px;
+  }
+}
+
