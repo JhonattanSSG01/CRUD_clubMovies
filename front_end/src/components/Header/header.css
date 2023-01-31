@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap');
+
 header > .navbar {
   background-color: #21164d;
 }
@@ -82,4 +85,49 @@ header > .navbar {
 input:not(:placeholder-shown) {
   opacity: 1;
   visibility: visible;
+}
+
+/*nav*/
+.collapse{
+  flex-grow: 0;
+}
+
+.collapse .nav-item{
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.nav-item > .icon{
+  margin-right: 5px;
+  color: #AB8AFF;
+  font-size: 30px;
+}
+
+.nav-item > .nav-link{
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav-item > .link:hover{
+  color: #AB8AFF;
+  transform: scale(1.1);
+}
+
+.nav-item > .dropLink:hover{
+  color: #AB8AFF;
+}
+
+.dropdown .porfile{
+  margin: 0 18px 0 10px;
+}
+
+.arrow{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -15px;
+  display: grid;
+  place-items: center;
 }

@@ -32,6 +32,56 @@ const Header = () => {
                 aria-label="Search"
               />
             </form>
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              <ul className="navbar-nav mb-2 mb-lg-0">
+                <li className="nav-item">
+                  <i className="ri-settings-4-line icon"></i>
+                  <a className="nav-link link" href="#">
+                    Settings
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <i className="ri-notification-3-line icon"></i>
+                  <a className="nav-link link" href="#">
+                    Support
+                  </a>
+                </li>
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropLink"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <img
+                      className="porfile"
+                      src={Porfile}
+                      alt="imagen del perfil"
+                    />
+                    Jose
+                    <span>
+                      <i className="ri-arrow-down-s-line arrow"></i>
+                    </span>
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Porfile
+                      </a>
+                    </li>
+                    <li>
+                      <a className="dropdown-item" href="#">
+                        Logo Out
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </header>
