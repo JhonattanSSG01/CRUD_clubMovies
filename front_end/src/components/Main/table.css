@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
+
+main{
+  font-family: "Josefin Sans", sans-serif;
+}
+
 .form-select{
   margin-right: 15px;
   border-radius: 40px;
@@ -17,7 +23,7 @@
 }
 
 .form-select:hover{
-  background-color: #AB8AFF;
+  background-color: rgba(230, 230, 230, .5);
   outline: none;
   border: none;
 }
@@ -47,7 +53,35 @@
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, .5);
 }
 
-.icon{
+.btn > .icon{
   font-size: 20px;
   margin-left: 80px;
+}
+
+.table{
+  max-width: 95%;
+  margin: auto;
+}
+
+.table-head{
+  width: 95%;
+  margin: 25px auto;
+  background-color: #D9D9D9;
+  color: #000;
+  border-radius: 40px;
+  padding: 0  10px;
+  border-collapse: separate;
+}
+
+.table-body{
+  width: 95%;
+  margin: auto;
+  color: #000;
+  border-collapse: separate;
+  border: 2px solid #d9d9d9;
+  border-radius: 10px;
+}
+
+.table > .head{
+  margin:  15px 0;
 }
