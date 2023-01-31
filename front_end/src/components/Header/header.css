@@ -1,0 +1,19 @@
+header > .navbar {
+  background-color: #21164d;
+}
+
+.container-fluid > .navbar-brand {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbar-brand > .container-line {
+  margin: 0 10px;
+}
+
+.container-line > .line-side{
+  width: 50px;
+  transform: rotate(90deg);
+}
