@@ -1,0 +1,53 @@
+.form-select{
+  margin-right: 15px;
+  border-radius: 40px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.all{
+  width: 80px;
+}
+.year{
+  width: 100px;
+}
+.duration{
+  width: 140px;
+}
+
+.form-select:hover{
+  background-color: #AB8AFF;
+  outline: none;
+  border: none;
+}
+
+.container-buttons,
+.container-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 30px;
+}
+
+.btn{
+  background-color: #AB8AFF;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 22px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+  transition: all .5s;
+}
+
+.btn:hover{
+  background-color: #21164D;
+  color: #fff;
+  transform: scale(.95);
+  transition: all .5s;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, .5);
+}
+
+.icon{
+  font-size: 20px;
+  margin-left: 80px;
+}
