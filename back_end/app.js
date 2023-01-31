@@ -7,7 +7,6 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 const jwt = require("jsonwebtoken");
-const { json } = require('express');
 const JWT_SECRET = "qknd;kwlnciuebfoueqafbejnfÍ351679+-5[]S;'ssdcpqeowihruiwehruyegfcbjtmrnu5yht98wsdnjSNug`1`{}072";
 
 const mongo_uri = 'mongodb+srv://movie:1234@movie.qon2fip.mongodb.net/?retryWrites=true&w=majority';
@@ -51,11 +50,11 @@ app.post("/login-user", async(req, res) => {
     const { username, password} = req.body;
     //Checking if username exist
     const user = await User.findOne({username});
-    if(user){
+    if(!user){
         return res.send({ error: "User Not Found!"});
     }
     //Checking password
-    if(await bcrypt.compare(password, user.password)){
+    if(await bcrypt.compare(password, User.password)){
         const token = jwt.sign({}, JWT_SECRET);
         
         if(res.status(201)){
@@ -66,6 +65,21 @@ app.post("/login-user", async(req, res) => {
     }
     res.json({status:"error", error:"Invalid Password"})
 })
+
+app.post("/dataMovie", async(res, req) => {
+    const{token} = req.body;
+    try {
+        //Token true
+        const user = jwt.verify(token, JWT_SECRET);
+        console.log(user)
+        const useremail = user.username;
+        User.findOne({username: useremail}).then((data) =>{
+            res.send({status:"ok", data: data});
+        }).catch((error) =>{
+            res.send({error:"error"});
+    });
+    } catch (error) {
+}});
 app.listen(PORT, () => {
     console.log('Server Started');
 });

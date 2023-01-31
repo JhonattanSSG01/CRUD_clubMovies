@@ -29,7 +29,9 @@ export const Login = () => {
         .then((data) => {
             console.log(data, "User Ok");
             if(data.status === "ok"){
-                alert("Login Successful")
+                alert("Login Successful");
+                window.localStorage.setItem("token", data.data);
+                window.location.href="../DataMovie/DataMovie";
             }
         });
     }
@@ -65,7 +67,7 @@ export const Login = () => {
                                 />
                         </div>    
                         <div className="redic">  
-                            <Link to="dataAdmin" id="login"> Login </Link>
+                            <button type="submit" id="login"> Login </button>
                             <Link to="Sign" id="sign"> Sign in</Link>
                         </div> 
                         <div className="forget">
