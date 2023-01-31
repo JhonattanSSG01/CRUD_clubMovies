@@ -155,6 +155,59 @@ header > .navbar {
     gap: 0;
   }
 
+  .navbar .logoT{
+    animation: ol 2s infinite;
+  }
+
+  @keyframes ol {
+    0%{
+      transform: skew(0deg);
+    }
+    100%{
+      transform: skew(30deg);
+    }
+  }
+
+  .icon{
+    animation: oli 2s infinite;
+  }
+
+  @keyframes oli {
+    0%{
+      transform: rotate(0deg);
+    }
+    10%{
+      transform: rotate(36deg);
+    }
+    20%{
+      transform: rotate(72deg);
+    }
+    30%{
+      transform: rotate(98deg);
+    }
+    40%{
+      transform: rotate(134deg);
+    }
+    50%{
+      transform: rotate(170deg);
+    }
+    60%{
+      transform: rotate(203deg);
+    }
+    70%{
+      transform: rotate(240deg);
+    }
+    80%{
+      transform: rotate(275deg);
+    }
+    90%{
+      transform: rotate(320deg);
+    }
+    100%{
+      transform: skew(360deg);
+    }
+  }
+
   .navbar-toggler{
     order: 3;
   }
