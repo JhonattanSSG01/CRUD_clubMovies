@@ -17,6 +17,21 @@ const Header = () => {
               </span>
               <img src={LogoT} alt="logotipo de la tienda" />
             </a>
+            <form
+              className="d-flex form"
+              role="search"
+              style={{ margin: "0 10px" }}
+            >
+              <button>
+                <i className="ri-search-2-line"></i>
+              </button>
+              <input
+                className="input-control"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
           </div>
         </nav>
       </header>
