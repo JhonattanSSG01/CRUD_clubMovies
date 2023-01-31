@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/crud');
+mongoose.connect('mongodb+srv://Crud:123321@cluster0.uvngqrp.mongodb.net/?retryWrites=true&w=majority');
 
 const objectDB = mongoose.connection
 
