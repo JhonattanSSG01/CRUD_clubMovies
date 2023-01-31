@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
+
+header > .navbar {
+  background-color: #21164d;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, .5);
+}
+
+.container-fluid {
+  gap: 20px 0;
+}
+
+.navbar .logo {
+  width: clamp(70px, 10vw, 140px);
+}
+
+.navbar .logoT {
+  width: clamp(120px, 10vw, 250px);
+}
+
+.container-fluid > .navbar-brand {
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container-line > .line-side {
+  width: 30px;
+  transform: rotate(90deg);
+}
+
+.navbar-toggler{
+  border: none;
+  outline: none;
+  background-color: #ab8aff;
+  opacity: .4;
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+/* removing default style of button */
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  position: relative;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: 30px;
+  transition: border-radius 0.5s ease;
+  background-color: rgba(0, 0, 0, 0.4);
+  order: 3;
+}
+/* styling of Input */
+.input-control {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: #805ee6;
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform 0.3s ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: 1px;
+}
+
+.input-control:focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+
+/* close button shown when typing */
+.input-control:not(:placeholder-shown) {
+  opacity: 1;
+  visibility: visible;
+}
+/*nav*/
+.collapse {
+  flex-grow: 0;
+}
+
+.collapse .nav-item {
+  display: flex;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.nav-item > .icon {
+  margin-right: 5px;
+  color: #ab8aff;
+  font-size: 30px;
+}
+
+.nav-item > .nav-link {
+  color: #fff;
+  font-size: 20px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nav-item:not(:nth-child(3)){
+  justify-content: center;
+}
+
+.nav-item > .link:hover {
+  color: #ab8aff;
+  transform: scale(1.1);
+}
+
+.nav-item > .dropLink:hover {
+  color: #ab8aff;
+}
+
+.dropdown .porfile {
+  margin: 0 18px 0 10px;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+}
+
+@media only screen and (min-width: 480px) {
+  .container-fluid {
+    gap: 0;
+  }
+
+  .navbar .logoT{
+    animation: ol 2s infinite;
+  }
+
+  @keyframes ol {
+    0%{
+      transform: skew(0deg);
+    }
+    100%{
+      transform: skew(30deg);
+    }
+  }
+
+  .icon{
+    animation: oli 2s infinite;
+  }
+
+  @keyframes oli {
+    0%{
+      transform: rotate(0deg);
+    }
+    10%{
+      transform: rotate(36deg);
+    }
+    20%{
+      transform: rotate(72deg);
+    }
+    30%{
+      transform: rotate(98deg);
+    }
+    40%{
+      transform: rotate(134deg);
+    }
+    50%{
+      transform: rotate(170deg);
+    }
+    60%{
+      transform: rotate(203deg);
+    }
+    70%{
+      transform: rotate(240deg);
+    }
+    80%{
+      transform: rotate(275deg);
+    }
+    90%{
+      transform: rotate(320deg);
+    }
+    100%{
+      transform: skew(360deg);
+    }
+  }
+
+  .navbar-toggler{
+    order: 3;
+  }
+
+  .navbar-brand > .container-line {
+    margin: 0 10px;
+  }
+
+  .container-line > .line-side {
+    width: 50px;
+  }
+
+  .form{
+    order: initial;
+  }
+  .arrow {
+    right: -15px;
+  }
+}
+
