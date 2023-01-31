@@ -17,7 +17,7 @@
 }
 
 .form-select:hover{
-  background-color: #AB8AFF;
+  background-color: rgba(230, 230, 230, .5);
   outline: none;
   border: none;
 }
@@ -47,7 +47,7 @@
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, .5);
 }
 
-.icon{
+.btn > .icon{
   font-size: 20px;
   margin-left: 80px;
 }

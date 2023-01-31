@@ -13,17 +13,23 @@ const Table = () => {
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
-            <select class="form-select year" aria-label="Default select example">
+            <select
+              class="form-select year"
+              aria-label="Default select example"
+            >
               <option selected>Year</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">1990</option>
+              <option value="2">2012</option>
+              <option value="3">2022</option>
             </select>
-            <select class="form-select duration" aria-label="Default select example">
+            <select
+              class="form-select duration"
+              aria-label="Default select example"
+            >
               <option selected>Duration</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="1">90 minutes</option>
+              <option value="2">120 minutes</option>
+              <option value="3">100 minutes</option>
             </select>
           </div>
           <div className="add">
