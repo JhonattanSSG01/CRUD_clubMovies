@@ -1,79 +1,102 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
 
-main{
+main {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.form-select{
-  margin-right: 15px;
+.form-select {
+  margin: 0 5px;
   border-radius: 40px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  font-size: 22px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: clamp(16px, 5vw, 22px);
   cursor: pointer;
 }
 
-.all{
+.all {
   width: 80px;
 }
-.year{
-  width: 100px;
+.year {
+  width: 90px;
 }
-.duration{
-  width: 140px;
+.duration {
+  width: 120px;
 }
 
-.form-select:hover{
-  background-color: rgba(230, 230, 230, .5);
+.form-select:hover {
+  background-color: rgba(230, 230, 230, 0.5);
   outline: none;
   border: none;
+}
+
+.container-buttons {
+  flex-direction: column;
 }
 
 .container-buttons,
 .container-filter {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 25px 30px;
+  justify-content: center;
+  margin: 15px 0;
 }
 
-.btn{
-  background-color: #AB8AFF;
+@media only screen and (min-width: 480px) {
+  .all {
+    width: 80px;
+  }
+  .year {
+    width: 100px;
+  }
+  .duration {
+    width: 140px;
+  }
+  .container-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+  }
+}
+
+.btn {
+  background-color: #ab8aff;
   color: #fff;
   border-radius: 50px;
-  font-size: 22px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
-  transition: all .5s;
+  font-size: clamp(16px, 5vw, 22px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  margin: 15px 0;
+  align-self: flex-end;
 }
 
-.btn:hover{
-  background-color: #21164D;
+.btn:hover {
+  background-color: #21164d;
   color: #fff;
-  transform: scale(.95);
-  transition: all .5s;
-  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, .5);
+  transform: scale(0.95);
+  transition: all 0.5s;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5);
 }
 
-.btn > .icon{
-  font-size: 20px;
-  margin-left: 80px;
+.btn > .icon {
+  font-size: clamp(16px, 5vw, 2px);
+  margin-left: 40px;
 }
 
-.table{
+.table {
   max-width: 95%;
   margin: auto;
 }
 
-.table-head{
+.table-head {
   width: 95%;
   margin: 25px auto;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #000;
   border-radius: 40px;
-  padding: 0  10px;
+  padding: 0 10px;
   border-collapse: separate;
 }
 
-.table-body{
+.table-body {
   width: 95%;
   margin: auto;
   color: #000;
@@ -82,6 +105,6 @@ main{
   border-radius: 10px;
 }
 
-.table > .head{
-  margin:  15px 0;
+.table > .head {
+  margin: 15px 0;
 }
