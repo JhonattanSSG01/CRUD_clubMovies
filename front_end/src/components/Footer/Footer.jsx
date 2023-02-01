@@ -12,7 +12,7 @@ const Footer = () => {
     <>
       <footer>
         <div className="container-fluid">
-          <p>Disigned By</p>
+          <p className="text">Disigned By</p>
           <section className="logos">
             <img src={Alejo} alt="" />
             <img src={Kevin} alt="" />

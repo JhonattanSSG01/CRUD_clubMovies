@@ -7,7 +7,7 @@ footer > .container-fluid {
   justify-content: center;
 }
 
-p {
+.text {
   color: var(--colorGlobalLigth);
   font-size: 25px;
 }
