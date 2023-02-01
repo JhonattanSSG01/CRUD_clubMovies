@@ -98,6 +98,58 @@ const Table = () => {
                   <i className="ri-delete-bin-5-line"></i>
                 </td>
               </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                  <i className="ri-edit-line"></i>
+                  <i className="ri-delete-bin-5-line"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                  <i className="ri-edit-line"></i>
+                  <i className="ri-delete-bin-5-line"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                  <i className="ri-edit-line"></i>
+                  <i className="ri-delete-bin-5-line"></i>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>
+                  <i className="ri-edit-line"></i>
+                  <i className="ri-delete-bin-5-line"></i>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

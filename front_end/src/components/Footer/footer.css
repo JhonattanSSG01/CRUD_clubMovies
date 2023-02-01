@@ -1,13 +1,14 @@
+/* Footer */
 footer > .container-fluid {
   padding: 15px;
-  background-color: #21164d;
+  background-color: var(--backgroundPrincipal);
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 p {
-  color: #fff;
+  color: var(--colorGlobalLigth);
   font-size: 25px;
 }
 
@@ -16,8 +17,9 @@ p {
   margin: 0 15px;
 }
 
-@media only screen and (min-width: 480px) {
-  .container-fluid {
+/* Responsive > 480px */
+@media only screen and (min-width: 850px) {
+  footer > .container-fluid {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;

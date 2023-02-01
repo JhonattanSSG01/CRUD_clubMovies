@@ -1,9 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
-
+/* Main */
 main {
-  font-family: "Josefin Sans", sans-serif;
+  min-height: calc(100vh - 217px);
+  padding: 20px;
 }
 
+/* Buttons Filter */
 .form-select {
   margin: 0 5px;
   border-radius: 40px;
@@ -22,6 +23,7 @@ main {
   width: 120px;
 }
 
+/* Hover Buttons */
 .form-select:hover {
   background-color: rgba(230, 230, 230, 0.5);
   outline: none;
@@ -39,27 +41,10 @@ main {
   margin: 15px 0;
 }
 
-@media only screen and (min-width: 480px) {
-  .all {
-    width: 80px;
-  }
-  .year {
-    width: 100px;
-  }
-  .duration {
-    width: 140px;
-  }
-  .container-buttons {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin: 15px;
-  }
-}
-
+/* Button Add */
 .btn {
-  background-color: #ab8aff;
-  color: #fff;
+  background-color: var(--backgroundSecondary);
+  color: var(--colorGlobalLigth);
   border-radius: 50px;
   font-size: clamp(16px, 5vw, 22px);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
@@ -69,8 +54,8 @@ main {
 }
 
 .btn:hover {
-  background-color: #21164d;
-  color: #fff;
+  background-color: var(--backgroundPrimary);
+  color: var(--colorGlobalLigth);
   transform: scale(0.95);
   transition: all 0.5s;
   box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5);
@@ -90,7 +75,7 @@ main {
   width: 95%;
   margin: 25px auto;
   background-color: #d9d9d9;
-  color: #000;
+  color: var(--colorGlobalDark);
   border-radius: 40px;
   padding: 0 10px;
   border-collapse: separate;
@@ -107,4 +92,31 @@ main {
 
 .table > .head {
   margin: 15px 0;
+}
+
+/* Responsive > 480px */
+@media only screen and (min-width: 480px) {
+  .all {
+    width: 80px;
+  }
+  .year {
+    width: 100px;
+  }
+  .duration {
+    width: 140px;
+  }
+  .container-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+  }
+}
+  
+/* Responsive > 760px */
+@media only screen and (min-width: 768px) {
+  .btn > .icon {
+    font-size: clamp(16px, 5vw, 2px);
+    margin-left: 80px;
+  }
 }

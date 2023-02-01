@@ -47,13 +47,13 @@ const Header = () => {
             >
               <ul className="navbar-nav  mb-lg-0">
                 <li className="nav-item">
-                  <i className="ri-settings-4-line icon"></i>
-                  <a className="nav-link link" href="#">
+                  <i className="ri-settings-4-line icon set"></i>
+                  <a className="nav-link link " href="#">
                     Settings
                   </a>
                 </li>
                 <li className="nav-item">
-                  <i className="ri-notification-3-line icon"></i>
+                  <i className="ri-notification-3-line icon sup"></i>
                   <a className="nav-link link" href="#">
                     Support
                   </a>
