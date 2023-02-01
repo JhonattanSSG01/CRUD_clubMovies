@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://127.0.0.1:27017/crud');
+mongoose.connect('mongodb+srv://movie:1234@movie.qon2fip.mongodb.net/?retryWrites=true&w=majority');
 
 const objectDB = mongoose.connection
 
