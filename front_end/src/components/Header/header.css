@@ -2,11 +2,7 @@
 
 header > .navbar {
   background-color: #21164d;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, .5);
-}
-
-.container-fluid {
-  gap: 20px 0;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .logo {
@@ -14,7 +10,7 @@ header > .navbar {
 }
 
 .navbar .logoT {
-  width: clamp(120px, 10vw, 250px);
+  width: clamp(120px, 20vw, 250px);
 }
 
 .container-fluid > .navbar-brand {
@@ -29,11 +25,11 @@ header > .navbar {
   transform: rotate(90deg);
 }
 
-.navbar-toggler{
+.navbar-toggler {
   border: none;
   outline: none;
   background-color: #ab8aff;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 /* From uiverse.io by @satyamchaudharydev */
@@ -47,14 +43,15 @@ header > .navbar {
 /* styling of whole input container */
 .form {
   position: relative;
-  width: 500px;
+  width: 400px;
+  margin: 15px auto 0;
   display: flex;
   align-items: center;
   padding-inline: 0.8em;
   border-radius: 30px;
   transition: border-radius 0.5s ease;
   background-color: rgba(0, 0, 0, 0.4);
-  order: 3;
+  order: 4;
 }
 /* styling of Input */
 .input-control {
@@ -125,7 +122,7 @@ header > .navbar {
   font-family: "Josefin Sans", sans-serif;
 }
 
-.nav-item:not(:nth-child(3)){
+.nav-item:not(:nth-child(3)) {
   justify-content: center;
 }
 
@@ -150,82 +147,104 @@ header > .navbar {
   display: grid;
   place-items: center;
 }
+.dropLink {
+  width: 135px;
+}
 
-@media only screen and (min-width: 480px) {
-  .container-fluid {
-    gap: 0;
+@media screen and (min-width: 480px){
+  .form {
+    width: 30%;
+    margin: 0;
+    order: initial;
   }
+}
 
-  .navbar .logoT{
-    animation: ol 2s infinite;
+@media screen and (min-width: 850px){
+  .navbar > .container-fluid{
+    flex-wrap: nowrap;
   }
-
-  @keyframes ol {
-    0%{
-      transform: skew(0deg);
-    }
-    100%{
-      transform: skew(30deg);
-    }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
   }
-
-  .icon{
-    animation: oli 2s infinite;
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
   }
-
-  @keyframes oli {
-    0%{
-      transform: rotate(0deg);
-    }
-    10%{
-      transform: rotate(36deg);
-    }
-    20%{
-      transform: rotate(72deg);
-    }
-    30%{
-      transform: rotate(98deg);
-    }
-    40%{
-      transform: rotate(134deg);
-    }
-    50%{
-      transform: rotate(170deg);
-    }
-    60%{
-      transform: rotate(203deg);
-    }
-    70%{
-      transform: rotate(240deg);
-    }
-    80%{
-      transform: rotate(275deg);
-    }
-    90%{
-      transform: rotate(320deg);
-    }
-    100%{
-      transform: skew(360deg);
-    }
-  }
-
-  .navbar-toggler{
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
     order: 3;
   }
-
   .navbar-brand > .container-line {
-    margin: 0 10px;
+    margin: 0;
   }
 
   .container-line > .line-side {
     width: 50px;
   }
 
-  .form{
-    order: initial;
-  }
   .arrow {
     right: -15px;
   }
+
+  .navbar .logoT {
+    animation: ol 2s infinite;
+  }
+
+  @keyframes ol {
+    0% {
+      transform: skew(0deg);
+    }
+    100% {
+      transform: skew(30deg);
+    }
+  }
+
+  .icon {
+    animation: oli 2s infinite;
+  }
+
+  @keyframes oli {
+    0% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(36deg);
+    }
+    20% {
+      transform: rotate(72deg);
+    }
+    30% {
+      transform: rotate(98deg);
+    }
+    40% {
+      transform: rotate(134deg);
+    }
+    50% {
+      transform: rotate(170deg);
+    }
+    60% {
+      transform: rotate(203deg);
+    }
+    70% {
+      transform: rotate(240deg);
+    }
+    80% {
+      transform: rotate(275deg);
+    }
+    90% {
+      transform: rotate(320deg);
+    }
+    100% {
+      transform: skew(360deg);
+    }
+  }
+
+  .container-line > .line-side {
+    width: 35px;
+  }
+  .dropLink{
+    width: 150px;
+  }
 }
+
 
