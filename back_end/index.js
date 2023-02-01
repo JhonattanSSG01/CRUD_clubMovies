@@ -1,4 +1,4 @@
-/* const express = require('express');
+const express = require('express');
 const cors = require('cors')
 const MovieServices = require('./services/movieService');
 
@@ -65,4 +65,4 @@ app.delete('/movie/:id', async (req, res) => {
 
 app.listen(port, function () {
   console.log(`The server is running in the port ${port}`);
-}) */
+})

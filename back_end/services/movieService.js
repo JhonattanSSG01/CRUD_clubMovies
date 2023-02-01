@@ -1,4 +1,4 @@
-/* const movieModel = require('../models/movieModel');
+const movieModel = require('../models/movieModel');
 
 class MovieServices {
   constructor(){
@@ -32,4 +32,4 @@ class MovieServices {
   }
 }
 
-module.exports = MovieServices; */
+module.exports = MovieServices;
