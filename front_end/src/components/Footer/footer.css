@@ -1,0 +1,27 @@
+/* Footer */
+footer > .container-fluid {
+  padding: 15px;
+  background-color: var(--backgroundPrincipal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  color: var(--colorGlobalLigth);
+  font-size: 25px;
+}
+
+.logos > img {
+  width: 100px;
+  margin: 0 15px;
+}
+
+/* Responsive > 480px */
+@media only screen and (min-width: 850px) {
+  footer > .container-fluid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}

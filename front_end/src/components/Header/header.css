@@ -1,12 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600&display=swap");
-
+/* Header Nav */
 header > .navbar {
-  background-color: #21164d;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, .5);
-}
-
-.container-fluid {
-  gap: 20px 0;
+  background-color: var(--backgroundPrincipal);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .navbar .logo {
@@ -14,11 +9,11 @@ header > .navbar {
 }
 
 .navbar .logoT {
-  width: clamp(120px, 10vw, 250px);
+  width: clamp(120px, 20vw, 250px);
 }
 
 .container-fluid > .navbar-brand {
-  color: #fff;
+  color: var(--colorGlobalLigth);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -29,34 +24,37 @@ header > .navbar {
   transform: rotate(90deg);
 }
 
-.navbar-toggler{
+/* Button Nav */
+.navbar-toggler {
   border: none;
   outline: none;
-  background-color: #ab8aff;
-  opacity: .4;
+  background-color: var(--backgroundSecondary);
+  opacity: 0.4;
 }
 
-/* From uiverse.io by @satyamchaudharydev */
-/* removing default style of button */
+/* Seacrh */
 
 .form button {
   border: none;
   background: none;
-  color: #8b8ba7;
+  color: #D9D9D9;
 }
-/* styling of whole input container */
+
+/* Input Container */
 .form {
   position: relative;
-  width: 500px;
+  width: 400px;
+  margin: 15px auto 0;
   display: flex;
   align-items: center;
   padding-inline: 0.8em;
   border-radius: 30px;
   transition: border-radius 0.5s ease;
   background-color: rgba(0, 0, 0, 0.4);
-  order: 3;
+  order: 4;
 }
-/* styling of Input */
+
+/* Input */
 .input-control {
   font-size: 0.9rem;
   background-color: transparent;
@@ -66,13 +64,14 @@ header > .navbar {
   padding-block: 0.7em;
   border: none;
   outline: none;
-  color: #fff;
+  color: var(--colorGlobalLigth);
 }
-/* styling of animated border */
+
+/*Animated Border */
 .form:before {
   content: "";
   position: absolute;
-  background: #805ee6;
+  background: var(--backgroundSecondary);
   transform: scaleX(0);
   transform-origin: center;
   width: 100%;
@@ -82,7 +81,8 @@ header > .navbar {
   border-radius: 1px;
   transition: transform 0.3s ease;
 }
-/* Hover on Input */
+
+/* Hove Input */
 .form:focus-within {
   border-radius: 1px;
 }
@@ -92,16 +92,17 @@ header > .navbar {
   outline: none;
   background-color: transparent;
 }
-/* here is code of animated border */
+
 .form:focus-within:before {
   transform: scale(1);
 }
 
-/* close button shown when typing */
+/* Button x */
 .input-control:not(:placeholder-shown) {
   opacity: 1;
   visibility: visible;
 }
+
 /*nav*/
 .collapse {
   flex-grow: 0;
@@ -115,33 +116,35 @@ header > .navbar {
 
 .nav-item > .icon {
   margin-right: 5px;
-  color: #ab8aff;
+  color: var(--backgroundSecondary);
   font-size: 30px;
 }
 
 .nav-item > .nav-link {
-  color: #fff;
+  color: var(--colorGlobalLigth);
   font-size: 20px;
-  font-family: "Josefin Sans", sans-serif;
 }
 
-.nav-item:not(:nth-child(3)){
+.nav-item:not(:nth-child(3)) {
   justify-content: center;
 }
 
 .nav-item > .link:hover {
-  color: #ab8aff;
+  color: var(--backgroundSecondary);
   transform: scale(1.1);
 }
 
 .nav-item > .dropLink:hover {
-  color: #ab8aff;
+  color: var(--backgroundSecondary);
 }
+
+/* Dropdown porfile */
 
 .dropdown .porfile {
   margin: 0 18px 0 10px;
 }
 
+/* Icon */
 .arrow {
   position: absolute;
   top: 0;
@@ -150,82 +153,128 @@ header > .navbar {
   display: grid;
   place-items: center;
 }
+.dropLink {
+  width: 135px;
+}
 
-@media only screen and (min-width: 480px) {
-  .container-fluid {
-    gap: 0;
+/* Responsive > 480px */
+@media screen and (min-width: 480px){
+  .form {
+    width: 30%;
+    margin: 0;
+    order: initial;
+  }
+}
+
+/* Responsive > 850px */
+@media screen and (min-width: 850px){
+  /* Nav */
+  .navbar > .container-fluid{
+    flex-wrap: nowrap;
+  }
+  .navbar-expand-lg .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+  }
+  .navbar-expand-lg .navbar-toggler {
+    display: none;
+    order: 3;
+  }
+  .navbar-brand > .container-line {
+    margin: 0;
+  }
+  
+  .container-line > .line-side {
+    width: 50px;
+  }
+  
+  .container-line > .line-side {
+    width: 35px;
   }
 
-  .navbar .logoT{
-    animation: ol 2s infinite;
+  .arrow {
+    right: -15px;
   }
 
-  @keyframes ol {
-    0%{
+  .dropLink{
+    width: 150px;
+  }
+  
+  /* Animation Logo Tipo*/
+  .navbar .logoT {
+    animation: moveSide 5s infinite;
+  }
+
+  @keyframes moveSide {
+    0% {
       transform: skew(0deg);
     }
-    100%{
+    100% {
       transform: skew(30deg);
     }
   }
 
-  .icon{
-    animation: oli 2s infinite;
+  /* Animation icons navbar*/
+  .set {
+    animation: rotateSettings 1.5s linear infinite;
   }
 
-  @keyframes oli {
-    0%{
+  @keyframes rotateSettings {
+    0% {
       transform: rotate(0deg);
     }
-    10%{
+    10% {
       transform: rotate(36deg);
     }
-    20%{
+    20% {
       transform: rotate(72deg);
     }
-    30%{
+    30% {
       transform: rotate(98deg);
     }
-    40%{
+    40% {
       transform: rotate(134deg);
     }
-    50%{
+    50% {
       transform: rotate(170deg);
     }
-    60%{
+    60% {
       transform: rotate(203deg);
     }
-    70%{
+    70% {
       transform: rotate(240deg);
     }
-    80%{
+    80% {
       transform: rotate(275deg);
     }
-    90%{
+    90% {
       transform: rotate(320deg);
     }
-    100%{
-      transform: skew(360deg);
+    100% {
+      transform: rotate(360deg);
     }
   }
 
-  .navbar-toggler{
-    order: 3;
+  /* Animation icons navbar*/
+  .sup {
+    animation: rotateSupport 2s linear infinite;
   }
 
-  .navbar-brand > .container-line {
-    margin: 0 10px;
-  }
-
-  .container-line > .line-side {
-    width: 50px;
-  }
-
-  .form{
-    order: initial;
-  }
-  .arrow {
-    right: -15px;
+  @keyframes rotateSupport {
+    0% {
+      transform: translate(0);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    100% {
+      transform: translateX(-1px);
+    }
   }
 }
+
+
 

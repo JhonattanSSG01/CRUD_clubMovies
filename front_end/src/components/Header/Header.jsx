@@ -4,10 +4,12 @@ import Logo from "../assets/logo.png";
 import LogoT from "../assets/logotipo.png";
 import Porfile from "../assets/porfile.png";
 import Table from "../Main/Table";
+import Footer from "../Footer/Footer";
+
 const Header = () => {
   return (
     <>
-      <header>  
+      <header>
         <nav className="navbar navbar-expand-lg">
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
@@ -17,17 +19,6 @@ const Header = () => {
               </span>
               <img className="logoT" src={LogoT} alt="logotipo de la tienda" />
             </a>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span class="navbar-toggler-icon"></span>
-            </button>
             <form className="form" role="search">
               <button>
                 <i className="ri-search-2-line"></i>
@@ -39,19 +30,30 @@ const Header = () => {
                 aria-label="Search"
               />
             </form>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav mb-2 mb-lg-0">
+              <ul className="navbar-nav  mb-lg-0">
                 <li className="nav-item">
-                  <i className="ri-settings-4-line icon"></i>
-                  <a className="nav-link link" href="#">
+                  <i className="ri-settings-4-line icon set"></i>
+                  <a className="nav-link link " href="#">
                     Settings
                   </a>
                 </li>
                 <li className="nav-item">
-                  <i className="ri-notification-3-line icon"></i>
+                  <i className="ri-notification-3-line icon sup"></i>
                   <a className="nav-link link" href="#">
                     Support
                   </a>
@@ -93,6 +95,7 @@ const Header = () => {
         </nav>
       </header>
       <Table />
+      <Footer />
     </>
   );
 };
