@@ -9,28 +9,18 @@ export const Sign = () => {
     const [password, setPassword] = useState('');
 
     const handleSubmit = (e) =>{
+        const body = {setName, setLastname, setEmail, setUsername, setPassword};
         e.preventDefault();
-        const name = setName;
-        const lastname = setLastname;
-        const email =  setEmail;
-        const username = setUsername;
-        const password = setPassword;
-        console.log(name, lastname, email, username);
-        fetch("http://localhost:5000/Sign",{
+        fetch("http://localhost:5000/signin",{
             method: "POST",
             crossDomain : true,
             headers: {
                 "Content-Type":"application/json",
                     Accept : "application/json",
                     "Access-Control-Allow-Origin":"*",
+                    "Access-Control-Allow-Methods":"GET, POST, PUT, DELETE",
             },
-            body:JSON.stringify({
-                name,
-                lastname,
-                email,
-                username,
-                password,
-            }),
+            body:JSON.stringify({body}),
         }).then((res) => res.json())
         .then((data) => {
             console.log(data, "User Register");

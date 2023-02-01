@@ -14,15 +14,14 @@ const UserDetailsShema = new Schema({
     collection : "UserInfo"
 });
 
-//Number of time to crypt
-const saltRounds = 10;
+
 //Create Schema
 /*const UserShema = new mongoose.Schema({
     username : { type:String, required:true, unique:true},
     password : { type:String, required:true}
-});*/
+});
 //This Function Executed Before Saving Changes
-/*UserShema.pre('save', function(next){
+UserDetailsShema.pre('save', function(next){
     if(this.isNew || this.isModified('password')){
         const document = this;
         //Encrypting Password Using Hash
@@ -41,7 +40,7 @@ const saltRounds = 10;
 
 //Comparing
 
-UserShema.method.isCorrectPassword = function(password, callback){
+/*UserShema.method.isCorrectPassword = function(password, callback){
     bcrypt.compare(password, this.password, function(err, same){
         if(err){
             callback(err);

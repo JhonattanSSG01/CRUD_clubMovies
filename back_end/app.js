@@ -7,15 +7,17 @@ app.use(express.json());
 const cors = require("cors");
 app.use(cors());
 const jwt = require("jsonwebtoken");
-const JWT_SECRET = "qknd;kwlnciuebfoueqafbejnfÍ351679+-5[]S;'ssdcpqeowihruiwehruyegfcbjtmrnu5yht98wsdnjSNug`1`{}072";
+const JWT_SECRET = "qkndakwlnciuebfoueqafbejnfÍ31679+-5[]S;'ssdcpqeowihruiwehruyegfcbjtmrnu5yht98wsdnjSNug`1`{}072";
+const bp = require('body-parser');
+app.use(bp.json());
+app.use(bp.urlencoded({ extended: true }));
 
 const mongo_uri = 'mongodb+srv://movie:1234@movie.qon2fip.mongodb.net/?retryWrites=true&w=majority';
 //Validating database connection
 mongoose
     .connect(mongo_uri,{
         useNewUrlParser : true,
-        useUnifiedTopology: true,
-        useFindAndModify: false
+        useUnifiedTopology: true
     })
     .then(() =>{
         console.log('Successfully connected');
@@ -23,28 +25,31 @@ mongoose
     .catch((e) => console.log(e));
 
 //Importing user.js
-require("./user");
+require("./userDetails.js");
 //Access to model
 const User = mongoose.model("UserInfo")
+//Number of time to crypt
+const saltRounds = 10;
 //Creating a New User en MongoDB
-app.post("/Sign", async (req, res) => { 
-    const {name, lastname, email, username, password} = req.body;
+app.post("/signin", async(req, res) => { 
+    const {setName, setLastname, setEmail, setUsername, setPassword} = req.body;
+    console.log("Hoolaa");
+    const encryptedPassword = await bcrypt.hash(setPassword, saltRounds);
     try {
-        const oldUser =await User.findOne({username});
-        const encryptedPassword = await bcrypt.hash(password, 10)
+        const oldUser = await User.findOne({ username:req.body.setUsername});
         if(oldUser){
             return res.send({ error: "User Exists"});
         }
         await User.create({
-            name,
-            lastname,
-            email,
-            username,
-            password: encryptedPassword,
+            setName,
+            setLastname,
+            setEmail,
+            setUsername,
+            setPassword: encryptedPassword,
         });
-        res.send({status:'ok'})
+        res.send({status:"ok"});
     } catch (error) {
-        res.send({status:"error no register"});
+        res.send({status:"Error No Register"});
     }
 });
 //Login data
