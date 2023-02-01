@@ -14,6 +14,8 @@ const mongo_uri = 'mongodb+srv://movie:1234@movie.qon2fip.mongodb.net/?retryWrit
 mongoose
     .connect(mongo_uri,{
         useNewUrlParser : true,
+        useUnifiedTopology: true,
+        useFindAndModify: false
     })
     .then(() =>{
         console.log('Successfully connected');
@@ -55,7 +57,7 @@ app.post("/login-user", async(req, res) => {
     }
     //Checking password
     if(await bcrypt.compare(password, User.password)){
-        const token = jwt.sign({}, JWT_SECRET);
+        const token = jwt.sign({username : User.username}, JWT_SECRET);
         
         if(res.status(201)){
             return res.json({status: "ok", data: token})
