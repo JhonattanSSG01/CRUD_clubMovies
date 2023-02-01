@@ -4,6 +4,7 @@ import Logo from "../assets/logo.png";
 import LogoT from "../assets/logotipo.png";
 import Porfile from "../assets/porfile.png";
 import Table from "../Main/Table";
+import Footer from "../Footer/Footer";
 
 const Header = () => {
   return (
@@ -94,6 +95,7 @@ const Header = () => {
         </nav>
       </header>
       <Table />
+      <Footer />
     </>
   );
 };

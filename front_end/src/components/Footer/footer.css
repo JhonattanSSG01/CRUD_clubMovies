@@ -1,0 +1,25 @@
+footer > .container-fluid {
+  padding: 15px;
+  background-color: #21164d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  color: #fff;
+  font-size: 25px;
+}
+
+.logos > img {
+  width: 100px;
+  margin: 0 15px;
+}
+
+@media only screen and (min-width: 480px) {
+  .container-fluid {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
