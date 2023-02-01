@@ -7,14 +7,14 @@ const Table = () => {
       <main>
         <div className="container-buttons">
           <div className="container-filter">
-            <select class="form-select all" aria-label="Default select example">
+            <select className="form-select all" aria-label="Default select example">
               <option selected>All</option>
               <option value="1">One</option>
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select>
             <select
-              class="form-select year"
+              className="form-select year"
               aria-label="Default select example"
             >
               <option selected>Year</option>
@@ -23,7 +23,7 @@ const Table = () => {
               <option value="3">2022</option>
             </select>
             <select
-              class="form-select duration"
+              className="form-select duration"
               aria-label="Default select example"
             >
               <option selected>Duration</option>
@@ -33,14 +33,14 @@ const Table = () => {
             </select>
           </div>
           <div className="add">
-            <button type="button" class="btn">
+            <button type="button" className="btn">
               Add
               <i className="ri-add-line icon"></i>
             </button>
           </div>
         </div>
         <div className="container table">
-          <table class="table-head">
+          <table className="table-head">
             <thead className="head">
               <tr>
                 <th scope="col">Id</th>
@@ -55,7 +55,7 @@ const Table = () => {
               </tr>
             </thead>
           </table>
-          <table class="table-light table-hover table-striped table-body">
+          <table className="table-light table-hover table-striped table-body">
             <tbody>
               <tr>
                 <th scope="row">1</th>

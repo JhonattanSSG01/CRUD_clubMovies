@@ -1,5 +1,10 @@
 {
   "dependencies": {
+    "react-router-dom": "^6.8.0",
     "remixicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.2.1"
   }
 }
