@@ -4,7 +4,7 @@ import cardIcon from '../assets/cardIcon.png';
 import PopUpAdd from "../button-add/Add";
 import Padre_modal from "../PopUp-Edit/Padre_modal";
 
-const Table = () => {
+const Table = (props) => {
   return (
     <>
       <main>
@@ -14,19 +14,19 @@ const Table = () => {
               className="form-select all"
               aria-label="Default select example"
             >
-              <option selected>All</option>
+              <option value={props}>All</option>
             </select>
             <select
               className="form-select year"
               aria-label="Default select example"
             >
-              <option selected>Year</option>
+              <option value={props}>Year</option>
             </select>
             <select
               className="form-select duration"
               aria-label="Default select example"
             >
-              <option selected>Duration</option>
+              <option value={props}>Duration</option>
             </select>
           </div>
           <div className="add">

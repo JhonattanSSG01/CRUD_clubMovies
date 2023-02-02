@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;1,300&family=KoHo&display=swap');
-
 .Overlay-modal{
     width: 100%;
     height: 100%;
@@ -10,7 +8,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .container-modal{
@@ -29,7 +26,6 @@
 }
 
 .modal_encabezated h1{
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     color: #898989;
     margin-bottom: 2rem;
@@ -65,14 +61,12 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
 }
 
 #movie-name::placeholder{
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #adadad;
@@ -85,14 +79,12 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
 }
 
 #movie-director::placeholder{
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #adadad;
@@ -105,14 +97,12 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
 }
 
 #movie-duration::placeholder{
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #adadad;
@@ -125,7 +115,6 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
@@ -138,7 +127,6 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
@@ -151,7 +139,6 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
@@ -164,7 +151,6 @@
     border: none;
     border-bottom: 1px solid #898989 ;
     padding: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 21px;
     color: #898989;
@@ -178,7 +164,6 @@
     border-radius: 15px;
     border: none;
     color: white;
-    font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 16px;
     display: flex;

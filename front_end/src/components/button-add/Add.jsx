@@ -7,6 +7,7 @@ import {faChevronDown} from "@fortawesome/free-solid-svg-icons"
 import {faFloppyDisk} from "@fortawesome/free-solid-svg-icons"
 import "./styles.css"
 
+
 function PopUpAdd() {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -14,8 +15,8 @@ function PopUpAdd() {
 
   return (
     <>
-    <div className='App '>
-      <Button className='btn ' onClick={handleShow}>
+    <div className='add-btn'>
+      <Button className='btn' onClick={handleShow}>
          Add
          <i className="ri-add-line icon"></i>
       </Button>

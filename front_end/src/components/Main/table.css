@@ -118,6 +118,7 @@ main {
 
 .card .card-text {
   text-align: left;
+  color: var(--colorGlobalLight);
 }
 
 .card .card-text:last-child {

@@ -1,10 +1,10 @@
-.App {
-    text-align: center;
+.add-btn {
+  text-align: center;
    display: flex;
    justify-content: flex-end;
    margin: 20px 10px;
-   
-  }
+}
+
   /* Button Add */
 .btn {
   background-color: var(--backgroundSecondary);
@@ -43,13 +43,14 @@
 
   .director{
     border-inline: inherit;
-    display:flex;
+    display:flex !;
     flex-Wrap:wrap;
     width: 225px;
     border-block-start: none;
     border-width: 1px;
     border-color: rgb(168, 168, 168);
     cursor: pointer;
+    
     
   }
   .agg{
