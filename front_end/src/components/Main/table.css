@@ -24,6 +24,12 @@ main {
   width: 120px;
 }
 
+#btn-edit{
+ background-color: transparent;
+ border: 0px;
+ color: #ab8aff;
+}
+
 /* Hover Buttons */
 .form-select:hover {
   background-color: rgba(230, 230, 230, 0.5);
@@ -33,6 +39,11 @@ main {
 
 .container-buttons {
   flex-direction: column;
+}
+
+#btn-edit:hover{
+  color: white;
+  transition: 1s;
 }
 
 .container-buttons,
@@ -126,6 +137,7 @@ main {
 .card-text > .edit:hover,
 .card-text > .delete:hover {
   color: var(--colorGlobalLigth);
+  transition: 1s;
 }
 
 .card-text .icon {

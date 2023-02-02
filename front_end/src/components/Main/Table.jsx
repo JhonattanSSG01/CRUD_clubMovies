@@ -2,6 +2,7 @@ import React from "react";
 import "./table.css";
 import cardIcon from '../assets/cardIcon.png';
 import PopUpAdd from "../button-add/Add";
+import Padre_modal from "../PopUp-Edit/Padre_modal";
 
 const Table = () => {
   return (
@@ -53,7 +54,7 @@ const Table = () => {
                   <p className="card-text">Director</p>
                   <p className="card-text">
                     <small className="edit">
-                      <i className="ri-edit-line icon"></i>
+                      <Padre_modal/>
                     </small>
                     <small className="delete">
                       <i className="ri-delete-bin-5-line icon"></i>
@@ -83,7 +84,7 @@ const Table = () => {
                   <p className="card-text">Director</p>
                   <p className="card-text">
                     <small className="edit">
-                      <i className="ri-edit-line icon"></i>
+                      <Padre_modal/>
                     </small>
                     <small className="delete">
                       <i className="ri-delete-bin-5-line icon"></i>
@@ -113,7 +114,7 @@ const Table = () => {
                   <p className="card-text">Director</p>
                   <p className="card-text">
                     <small className="edit">
-                      <i className="ri-edit-line icon"></i>
+                      <Padre_modal/>
                     </small>
                     <small className="delete">
                       <i className="ri-delete-bin-5-line icon"></i>
