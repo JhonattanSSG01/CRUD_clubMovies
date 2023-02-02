@@ -8,22 +8,22 @@ const Table = () => {
   const dispatch = useDispatch();//funcion que permite traer y ejecutar las acciones del store
   const filters = useSelector(state => state.movie.filters);//trae el estado de la store del objeto filters
   const { data: movies } = useSelector(state => state.movie.movies);//trae el estado de la store del objeto movies
-  const { getMovie, deleteMovie } = useMovie();
+  const { getMovie, deleteMovie } = useMovie();//se trae el hook creado con los componentes de obtener y eliminar pelicula
 
-  useEffect(() => {
+  useEffect(() => {//Cada vez que se actualiza se ejecuta la funcion getmovie del objeto filters
     getMovie();
   }, [filters]);
 
   const addFilter = (key, value) => {
-    const defualtSValues = ['All', 'Year', 'Duration'];
-    const endValue = defualtSValues.includes(value) ? null : value;
+    const defualtSValues = ['All', 'Year', 'Duration'];//Guardamos en un array los strings de los select
+    const endValue = defualtSValues.includes(value) ? null : value;//defualtSValues obtiene el valor dentro de una cadena de texto es nulo o tenga su valor
 
-    if (endValue === null) {
-      const { [key]: value, ...restFilters } = filters
+    if (endValue === null) {//si el valor de esos strings lo encuentra null entonces
+      const { [key]: value, ...restFilters } = filters//los valores se van guardando en el array restFilters al objeto filters
 
-      dispatch(updateFilters(restFilters));
+      dispatch(updateFilters(restFilters));//Se ejecuta el nuevo estado que va a tener la funcion updateFilters
     } else {
-      dispatch(updateFilters({ ...filters, [key]: value }))
+      dispatch(updateFilters({ ...filters, [key]: value }))//si no va a tener el mismo estado inicial
     }
   }
 
@@ -41,7 +41,7 @@ const Table = () => {
             <select
               class="form-select year"
               aria-label="Default select example"
-              onChange={e => addFilter('age', e.target.value)}
+              onChange={e => addFilter('age', e.target.value)}//Se llama a funcion de filtro tomando el valor de cada opcion del selector
             >
               <option selected>Year</option>
               <option value="1990">1990</option>
@@ -84,7 +84,7 @@ const Table = () => {
           </table>
           <table class="table-light table-hover table-striped table-body">
             <tbody>
-              {movies.map(item => (
+              {movies.map(item => (//hacemos un mapeo por item y clave en un schema
                 <tr key={item._id}>
                   <th>{item._id}</th>
                   <td>{item.title}</td>
@@ -99,7 +99,7 @@ const Table = () => {
                       edit
                       <i className="ri-edit-line"></i>
                     </button>
-                    <button onClick={() => deleteMovie(item._id)}>
+                    <button onClick={() => deleteMovie(item._id)}>{/* Cada vez que se de click se ejecuta la funcion obteniendo el item por id */}
                       delete
                       <i className="ri-delete-bin-5-line"></i>
                     </button>

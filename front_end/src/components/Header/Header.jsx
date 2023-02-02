@@ -7,16 +7,16 @@ import Table from "../Main/Table";
 import { updateFilters } from '../../reducers/movies';
 import "./header.css";
 const Header = () => {
-  const dispatch = useDispatch();
-  const filters = useSelector(state => state.movie.filters);
+  const dispatch = useDispatch();//funcion que permite traer y ejecutar las acciones del store
+  const filters = useSelector(state => state.movie.filters);//trae el estado de la store del objeto filters
 
   const addFilter = (key, value) => {
-    if (!value) {
-      const { [key]: value, ...restFilters } = filters
+    if (!value) {//si no hay un valor en los objetos
+      const { [key]: value, ...restFilters } = filters//el objeto filters mostrará todos los que estan
 
       dispatch(updateFilters(restFilters));
     } else {
-      dispatch(updateFilters({ ...filters, [key]: value }))
+      dispatch(updateFilters({ ...filters, [key]: value }))//Si no pues se filta por el valor
     }
   }
 
@@ -52,7 +52,7 @@ const Header = () => {
                 type="search"
                 placeholder="Search"
                 aria-label="Search"
-                onChange={e => addFilter('title', e.target.value)}
+                onChange={e => addFilter('title', e.target.value)}//Cada vez que cambia su funcion tomara el valor por el string de title
               />
             </form>
             <div

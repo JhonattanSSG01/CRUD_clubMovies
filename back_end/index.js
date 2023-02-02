@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors')
-const MovieServices = require('./services/movieService');
+const MovieServices = require('./services/movieService');// Traemos el archivo que esta conectado por el schema
 
 const app = express();
 
@@ -8,7 +8,7 @@ app.use(express.json());
 
 
 // permitir que urls pueden conectarse por medio de cors
-const whitelist = [
+const whitelist = [//Conexion para conectar el servidor al backend 
   'http://localhost:3000',
   'http://myapp.co',
 ];
@@ -29,13 +29,13 @@ app.use(cors(options))
 const port = 5000
 
 const connection = require('./mondoDB');
-const movieService = new MovieServices()
+const movieService = new MovieServices()//Se crea nuevas funcionalidades
 
 app.get('/', (request, response) => {
   response.end('Bienvenidos al servidor Backend corriedno....');
 })
 
-app.get('/movies', async (req, res) => {
+app.get('/movies', async (req, res) => {//
   try {
     const data = await movieService.find(req.query);
     res.send(data);
