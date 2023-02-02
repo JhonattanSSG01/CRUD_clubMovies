@@ -32,4 +32,4 @@ class MovieServices {
   }
 }
 
-module.exports = MovieServices;
+module.exports = MovieServices ;
