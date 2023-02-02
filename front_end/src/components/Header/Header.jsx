@@ -95,6 +95,7 @@ const Header = () => {
         </nav>
       </header>
       <Table />
+      
       <Footer />
     </>
   );

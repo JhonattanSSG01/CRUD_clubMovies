@@ -1,6 +1,7 @@
 import React from "react";
 import "./table.css";
 import cardIcon from '../assets/cardIcon.png';
+import PopUpAdd from "../button-add/Add";
 
 const Table = () => {
   return (
@@ -28,10 +29,7 @@ const Table = () => {
             </select>
           </div>
           <div className="add">
-            <button type="button" className="btn">
-              Add
-              <i className="ri-add-line icon"></i>
-            </button>
+            <PopUpAdd/>
           </div>
         </div>
         <div className="container-cards">

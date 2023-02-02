@@ -1,0 +1,105 @@
+.App {
+    text-align: center;
+   display: flex;
+   justify-content: flex-end;
+   margin: 20px 10px;
+   
+  }
+  /* Button Add */
+.btn {
+  background-color: var(--backgroundSecondary);
+  color: var(--colorGlobalLigth);
+  border-radius: 50px;
+  font-size: clamp(16px, 5vw, 22px);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s;
+  margin: 15px 0;
+  align-self: flex-end;
+}
+
+.btn:hover {
+  background-color: var(--backgroundPrincipal);
+  color: var(--colorGlobalLigth);
+  transform: scale(0.95);
+  transition: all 0.5s;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.5);
+}
+
+.btn > .icon {
+  font-size: clamp(16px, 5vw, 2px);
+  margin-left: 40px;
+}
+
+
+  .title{
+    border-inline: inherit;
+    width: 400px;
+    border-block-start: none;
+    border-width: 2.5px;
+    border-color: rgb(168, 168, 168);
+    margin: 20px 10px;
+    cursor: pointer;
+  }
+
+  .director{
+    border-inline: inherit;
+    display:flex;
+    flex-Wrap:wrap;
+    width: 225px;
+    border-block-start: none;
+    border-width: 1px;
+    border-color: rgb(168, 168, 168);
+    cursor: pointer;
+    
+  }
+  .agg{
+    background-color: rgb(37, 0, 124) !important;
+  }
+  
+ 
+
+  @media (max-width: 375px) {
+    .title{
+        width: 300px !important;
+     
+    }
+    hr{
+      width: 200px !important;
+  
+    }
+   .iconos , .icon  {
+      margin-right: 200px !important;
+      
+    }
+    
+   
+    .director{
+      width: 200px;
+  }
+  }
+    
+  @media (max-width: 600px) {
+    .title{
+        width: 350px;
+    }
+
+    hr{
+      width: 450px !important;
+  
+    }
+   .iconos , .icon{
+      margin-left: 240px !important;
+      
+    }
+    .icon{
+      margin-left: 270px !important;
+    }
+   
+    .director{
+      width: 450px;
+
+    }
+    
+    
+  
+  }
