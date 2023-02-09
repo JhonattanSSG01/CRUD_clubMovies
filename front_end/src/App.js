@@ -1,9 +1,9 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {Login} from "./components/Login/Login";
-import {DataMovie} from "./components/DataMovie/DataMovie"
-import {Sign} from './components/SignUp/Sign';
-import Header from './components/Header/Header';
+import {Login} from "./Components/Login/Login";
+import {DataMovie} from "./Components/DataMovie/DataMovie"
+import {Sign} from './Components/SignUp/Sign';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
