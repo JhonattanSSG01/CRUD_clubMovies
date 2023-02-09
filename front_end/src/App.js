@@ -1,7 +1,5 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
-import {DataMovie} from "./components/DataMovie/DataMovie"
-import {Sign} from './components/SignUp/Sign';
 import Header from './components/Header/Header';
 
 function App() {
