@@ -1,10 +1,33 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import "./table.css";
-import cardIcon from '../assets/cardIcon.png';
+import axios from "../../api/api";
+import Movie from "./movie";
 import PopUpAdd from "../button-add/Add";
-import Padre_modal from "../PopUp-Edit/Padre_modal";
 
-const Table = (props) => {
+const ListaUsuarios = (props) => {
+  const [dataUsuarios, setDataUsuarios] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("/api/user/header")
+      .then((response) => {
+        console.log(response.data);
+        setDataUsuarios(response.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
+  // Mapear lista
+  const listaUsuarios = dataUsuarios.map((user) => {
+    return (
+      <>
+        <Movie user={user} key={user.id} />
+      </>
+    );
+  });
+
   return (
     <>
       <main>
@@ -30,105 +53,13 @@ const Table = (props) => {
             </select>
           </div>
           <div className="add">
-            <PopUpAdd/>
+            <PopUpAdd />
           </div>
         </div>
-        <div className="container-cards">
-          <div className="card mb-3">
-            <div className="row g-0">
-              <div className="col-md-5 figure">
-                <img
-                  src={cardIcon}
-                  className="img-fluid rounded-start"
-                  alt="Imagen alusiva"
-                />
-              </div>
-              <div className="col-md-7">
-                <div className="card-body">
-                  <h5 className="card-title">Movie title</h5>
-                  <p className="card-text">Age</p>
-                  <p className="card-text">Duration</p>
-                  <p className="card-text">Lenguage</p>
-                  <p className="card-text">Premiere</p>
-                  <p className="card-text">Country</p>
-                  <p className="card-text">Director</p>
-                  <p className="card-text">
-                    <small className="edit">
-                      <Padre_modal/>
-                    </small>
-                    <small className="delete">
-                      <i className="ri-delete-bin-5-line icon"></i>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card mb-3">
-            <div className="row g-0">
-              <div className="col-md-5 figure">
-                <img
-                  src={cardIcon}
-                  className="img-fluid rounded-start"
-                  alt="Imagen alusiva"
-                />
-              </div>
-              <div className="col-md-7">
-                <div className="card-body">
-                  <h5 className="card-title">Movie title</h5>
-                  <p className="card-text">Age</p>
-                  <p className="card-text">Duration</p>
-                  <p className="card-text">Lenguage</p>
-                  <p className="card-text">Premiere</p>
-                  <p className="card-text">Country</p>
-                  <p className="card-text">Director</p>
-                  <p className="card-text">
-                    <small className="edit">
-                      <Padre_modal/>
-                    </small>
-                    <small className="delete">
-                      <i className="ri-delete-bin-5-line icon"></i>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="card mb-3">
-            <div className="row g-0">
-              <div className="col-md-5 figure">
-                <img
-                  src={cardIcon}
-                  className="img-fluid rounded-start"
-                  alt="Imagen alusiva"
-                />
-              </div>
-              <div className="col-md-7">
-                <div className="card-body">
-                  <h5 className="card-title">Movie title</h5>
-                  <p className="card-text">Age</p>
-                  <p className="card-text">Duration</p>
-                  <p className="card-text">Lenguage</p>
-                  <p className="card-text">Premiere</p>
-                  <p className="card-text">Country</p>
-                  <p className="card-text">Director</p>
-                  <p className="card-text">
-                    <small className="edit">
-                      <Padre_modal/>
-                    </small>
-                    <small className="delete">
-                      <i className="ri-delete-bin-5-line icon"></i>
-                    </small>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div className="container-cards">{listaUsuarios}</div>
       </main>
     </>
   );
 };
 
-export default Table;
-
+export default ListaUsuarios;
