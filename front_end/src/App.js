@@ -12,7 +12,8 @@ function App() {
         <Routes>
           <Route path="/dataAdmin" element={<DataMovie/>}></Route>
           <Route path="/Sign" element={<Sign/>}></Route>
-          <Route path="/" element={<Header/>}></Route>
+          <Route path="/header" element={<Header/>}></Route>
+          <Route path="/" element={<Login/>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
