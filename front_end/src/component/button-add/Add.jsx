@@ -39,7 +39,7 @@ function PopUpAdd() {
       .post("/api/user/addUser", user)
       .then((response) => {
         console.log(response.data);
-         navegar("/header");
+         navegar(0);
       })
       .then((err) => {
         console.log(err);
